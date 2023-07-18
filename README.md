@@ -13,10 +13,15 @@ Let's start by sampling from the random processes mentioned above at a frequency
 | Mean of $x_1$ | Mean of $x_2$ |
 | --- | --- |
 | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/x1_mean.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/x2_mean.jpg"> |
+
 Here are the exact values of the mean calculated manually.
+
 $E[x_1] = 0$
 
 $E[x_2] = 2/\pi[sin(2\pi t+\pi/4)+cos(2\pi t+\pi/4)]$
+
+By increasing the number of samples in $x_1$, we observe a convergence of its mean towards **zero**, indicating that the **mean stationarity** condition is fulfilled. 
+However, the mean of $x_2$ varies with time, thus violating the condition of **mean stationarity**. Consequently, $x_2$ cannot be considered a **stationary random process**.
 | Sample Size | Autocorrelation function of $x_1$ | Autocorrelation function of $x_2$ |
 | --- | --- | --- |
 | 100 | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto1_100.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto2_100.jpg"> |
