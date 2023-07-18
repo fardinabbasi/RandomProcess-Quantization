@@ -42,5 +42,8 @@ In this section, the signal will undergo a **uniform quantization** process to c
 
 $g(t) = 4 + sin(2\pi t) + cos(\pi t) + cos(\pi t/2) + tan(\pi t/6)$
 ### Sampling
-<h3> Converting an Analog Signal to Digital to Transfer & Recieve It </h3>
+To begin, an analog signal $g(t)$ was generated consisting of 15,000 points. Subsequently, the signal was sampled at a frequency of $fs = 300 Hz$. The obtained results are as follows.
+| Analog Signal | Sampled Signal |
+| --- | --- |
+| <img src="readme_images/analog.jpg"> | <img src="readme_images/zoomed.jpg"> |
 <h2> Delta Modulation </h2>
