@@ -46,4 +46,26 @@ To begin, an analog signal $g(t)$ was generated consisting of 15,000 points. Sub
 | Analog Signal | Sampled Signal |
 | --- | --- |
 | <img src="readme_images/analog.jpg"> | <img src="readme_images/zoomed.jpg"> |
+### Applying Quantization Levels
+To perform **uniform quantization**, the range of the sampled signal amplitude was divided into 33 levels. The process was implemented using the following code.
+```ruby
+N = 33;
+lines = linspace(min(g_sample),max(g_sample),N);
+quantization = zeros(1,length(g_sample));
+hold on
+for k=1:length(lines)
+    yline(lines(k));
+end
+for i=1:length(quantization)
+    for j=1:length(lines)-1
+        mean_two_line = (lines(j+1)+lines(j))/2;
+        if(g_sample(i) >= lines(j) && g_sample(i) <= lines(j+1))
+            quantization(i) = mean_two_line;
+        end
+    end
+end
+```
+| Quantization levels | Quantized Signal |
+| --- | --- |
+| <img src="readme_images/levels.jpg"> | <img src="readme_images/quant.jpg"> |
 <h2> Delta Modulation </h2>
