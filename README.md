@@ -12,9 +12,12 @@ Let's start by sampling from the random processes mentioned above at a frequency
 
 | Mean of $x_1$ | Mean of $x_2$ |
 | --- | --- |
-| <img src="/readme_images/x1_mean.jpg"> | <img src="/readme_images/x2_mean.jpg"> |
+| <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/x1_mean.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/x1_mean.jpg"> |
 
-
+| Sample Size | Autocorrelation function of $x_1$ | Autocorrelation function of $x_2$ |
+| --- | --- | --- |
+| 100 | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto1_100.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto2_100.jpg"> |
+| 1000 | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto1_1000.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto2_1000.jpg"> |
 <h3> Determining if Given Random Processes are Stationary Processes or not by Statistical Analysis </h3>
 <h2> Part 2: Quantization </h2>
 <h3> Converting an Analog Signal to Digital to Transfer & Recieve It </h3>
