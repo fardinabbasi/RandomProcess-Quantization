@@ -12,12 +12,21 @@ Let's start by sampling from the random processes mentioned above at a frequency
 
 | Mean of $x_1$ | Mean of $x_2$ |
 | --- | --- |
-| <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/x1_mean.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/x1_mean.jpg"> |
+| <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/x1_mean.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/x2_mean.jpg"> |
+Here are the exact values of the mean calculated manually.
+$E[x_1] = 0$
 
+$E[x_2] = 2/\pi[sin(2\pi t+\pi/4)+cos(2\pi t+\pi/4)]$
 | Sample Size | Autocorrelation function of $x_1$ | Autocorrelation function of $x_2$ |
 | --- | --- | --- |
 | 100 | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto1_100.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto2_100.jpg"> |
 | 1000 | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto1_1000.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto2_1000.jpg"> |
+
+Here are the exact values of the autocorrelation function calculated manually.
+
+$R_{x_1} = cos(2\pi(t_1-t_2))/2 $
+
+$R_{x_2} = cos(2\pi(t_1+t_2))/\pi + cos(2\pi(t_1-t_2))/2$
 <h3> Determining if Given Random Processes are Stationary Processes or not by Statistical Analysis </h3>
 <h2> Part 2: Quantization </h2>
 <h3> Converting an Analog Signal to Digital to Transfer & Recieve It </h3>
