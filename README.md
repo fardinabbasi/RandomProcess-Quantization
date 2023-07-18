@@ -68,4 +68,7 @@ end
 | Quantization levels | Quantized Signal |
 | --- | --- |
 | <img src="readme_images/levels.jpg"> | <img src="readme_images/quant.jpg"> |
+### Digitalizing
+
+
 <h2> Delta Modulation </h2>
