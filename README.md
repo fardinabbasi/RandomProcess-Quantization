@@ -1,7 +1,7 @@
 # RandomProcess & Quantization
 Determining if given [random processes](https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/RandomProcess.mlx) are stationary processes(WSS) or not with statistical analysis MATLAB.
 
-[Converting](https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/Quantization.mlx) an analog signal to digital to transfer & receive it in MATLAB.
+[Converting](https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/Quantization.mlx) an analog signal to digital to transfer & receive it in **MATLAB**.
 
 ## Random Process
 $x_1(t) = cos(2\pi t+\phi); \phi \approx U[-\pi,\pi]$
@@ -30,9 +30,17 @@ However, the mean of $x_2$ varies with time, thus violating the condition of **m
 Here are the exact values of the autocorrelation function calculated manually.
 
 $R_{x_1} = cos(2\pi(t_1-t_2))/2 $
-
+ 
 $R_{x_2} = cos(2\pi(t_1+t_2))/\pi + cos(2\pi(t_1-t_2))/2$
-<h3> Determining if Given Random Processes are Stationary Processes or not by Statistical Analysis </h3>
-<h2> Part 2: Quantization </h2>
+
+By analyzing the diagrams from the standpoint of a **constant time difference** ($\tau = t_1 - t_2$), we can conclude that the autocorrelation function of $x_1$ is **solely** determined by $\tau$, thus meeting the **criteria** for a **stationary random process**.
+
+However, in the case of $x_2$, the autocorrelation function yields **different** values depending on $\tau$.
+
+## Quantization
+In this section, the signal will undergo a **uniform quantization** process to convert it into a **digital** signal. Once received, the digital signal will be converted back into an **analog** signal.
+
+$g(t) = 4 + sin(2\pi t) + cos(\pi t) + cos(\pi t/2) + tan(\pi t/6)$
+### Sampling
 <h3> Converting an Analog Signal to Digital to Transfer & Recieve It </h3>
 <h2> Delta Modulation </h2>
