@@ -114,6 +114,4 @@ end
 ```
 <img src="readme_images/decoded.jpg">
 
-## Delta Modulation
-
 
