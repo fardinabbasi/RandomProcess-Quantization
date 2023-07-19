@@ -76,6 +76,17 @@ This section describes the procedure of transmitting signals from the transmitte
 
 ### Receiving the Digital Signal
 The receiver will receive the signal along with **noise**, which is assumed to follow a **normal random process**. The **Signal-to-Noise Ratio (SNR)** is assumed to be 2dB.
+
+<img src="readme_images/energy_calc.jpg">
+
+```ruby
+noise = normrnd(0,0.48,[1,length(modulate_signal)]);
+
+signal_with_noise = modulate_signal + noise;
+```
+Here is the received signal with the aforementioned noise.
+
+<img src="readme_images/noisy.jpg">
 <h2> Delta Modulation </h2>
 
 
