@@ -87,6 +87,17 @@ signal_with_noise = modulate_signal + noise;
 Here is the received signal with the aforementioned noise.
 
 <img src="readme_images/noisy.jpg">
+
+### Decoding
+A policy has been implemented to convert the pulses into their corresponding digits, with the knowledge that each digit is sent in **1 second**.
+The basic pulse is multiplied in the received pulse string for every second. By calculating their mutual energy and considering the energy of the basic pulse, the amplitude of each of these pulses is determined.
+```ruby
+for i=1:length(bits)
+    noise_pulse = signal_with_noise(((i-1)*1000)+1:i*1000).*pulse;
+    energy_each_pulse(i) = sum(noise_pulse) / energy_pulse;
+end
+```
+Now, the energy_each_pulse values are compared with the two-dimensional array obtained from the [Digitizing](https://github.com/fardinabbasi/RandomProcess-Quantization/edit/main/README.md#digitalizing) section in order to derive the quantization level.
 <h2> Delta Modulation </h2>
 
 
