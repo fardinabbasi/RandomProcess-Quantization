@@ -112,6 +112,8 @@ for i=1:length(energy_each_pulse)
     end
 end
 ```
-<h2> Delta Modulation </h2>
+<img src="readme_images/decoded.jpg">
+
+## Delta Modulation
 
 
