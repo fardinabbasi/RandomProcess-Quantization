@@ -97,7 +97,21 @@ for i=1:length(bits)
     energy_each_pulse(i) = sum(noise_pulse) / energy_pulse;
 end
 ```
-Now, the energy_each_pulse values are compared with the two-dimensional array obtained from the [Digitizing](https://github.com/fardinabbasi/RandomProcess-Quantization/edit/main/README.md#digitalizing) section in order to derive the quantization level.
+Now, the energy_each_pulse values are compared with the two-dimensional array obtained from the Digitizing section in order to derive the quantization level.
+```ruby
+for i=1:length(energy_each_pulse)
+    nearest_odd_number = energy_each_pulse(i);
+    is_odd = mod(nearest_odd_number,2) < 1;
+    nearest_odd_number = floor(nearest_odd_number);
+    nearest_odd_number(is_odd) = nearest_odd_number(is_odd)+1;
+    energy_each_pulse(i) = nearest_odd_number;
+    for j=1:length(lines)-1
+        if (energy_each_pulse(i) == TwoD_array(1,j))
+            decode_signal(i) = TwoD_array(2,j);
+        end
+    end
+end
+```
 <h2> Delta Modulation </h2>
 
 
