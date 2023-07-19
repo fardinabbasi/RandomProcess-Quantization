@@ -69,6 +69,6 @@ end
 | --- | --- |
 | <img src="readme_images/levels.jpg"> | <img src="readme_images/quant.jpg"> |
 ### Digitalizing
-
+This section describes the procedure of transmitting signals from the transmitter to the receiver using **PAM (Pulse Amplitude Modulation)** principles. For each quantized point **(Digit or Symbol)**, the base pulse is multiplied by a specific range before transmission.
 
 <h2> Delta Modulation </h2>
