@@ -38,7 +38,7 @@ By analyzing the diagrams from the standpoint of a **constant time difference** 
 However, in the case of $x_2$, the autocorrelation function yields **different** values depending on $\tau$.
 
 ## Quantization
-In this section, the $g(t)$signal will undergo a **uniform quantization** process to convert it into a **digital** signal. Once received, the digital signal will be converted back into an **analog** signal.
+In this section, the $g(t)$ signal will undergo a **uniform quantization** process to convert it into a **digital** signal. Once received, the digital signal will be converted back into an **analog** signal.
 
 $g(t) = 4 + sin(2\pi t) + cos(\pi t) + cos(\pi t/2) + tan(\pi t/6)$
 ### Sampling
