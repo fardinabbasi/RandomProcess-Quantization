@@ -18,7 +18,7 @@ Here are the exact values of the mean calculated manually.
 
 $E[x_1] = 0$
 
-$E[x_2] = 2/\pi[sin(2\pi t+\pi/4)+cos(2\pi t+\pi/4)]$
+$E[x_2] = 2[sin(2\pi t+\pi/4)+cos(2\pi t+\pi/4)]/\pi$
 
 By increasing the number of samples in $x_1$, we observe a convergence of its mean towards **zero**, indicating that the **mean stationarity** condition is fulfilled. 
 However, the mean of $x_2$ varies with time, thus violating the condition of **mean stationarity**. Consequently, $x_2$ cannot be considered a **stationary random process**.
