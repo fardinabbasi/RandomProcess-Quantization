@@ -73,4 +73,9 @@ This section describes the procedure of transmitting signals from the transmitte
 | Base Pulse | Modulation Result | Modulation Result (Zoomed) |
 | --- | --- | --- |
 | <img src="readme_images/base.jpg"> | <img src="readme_images/modulation.jpg"> | <img src="readme_images/m_zoomed.jpg"> |
+
+### Receiving the Digital Signal
+The receiver will receive the signal along with **noise**, which is assumed to follow a **normal random process**. The **Signal-to-Noise Ratio (SNR)** is assumed to be 2dB.
 <h2> Delta Modulation </h2>
+
+
