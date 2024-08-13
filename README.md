@@ -12,7 +12,7 @@ Let's start by sampling from the random processes mentioned above at a frequency
 
 | Mean of $x_1$ | Mean of $x_2$ |
 | --- | --- |
-| <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/x1_mean.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/x2_mean.jpg"> |
+| <img src="./doc/x1_mean.jpg"> | <img src="./doc/x2_mean.jpg"> |
 
 Here are the exact values of the mean calculated manually.
 
@@ -24,8 +24,8 @@ By increasing the number of samples in $x_1$, we observe a convergence of its me
 However, the mean of $x_2$ varies with time, thus violating the condition of **mean stationarity**. Consequently, $x_2$ cannot be considered a **stationary random process**.
 | Sample Size | Autocorrelation function of $x_1$ | Autocorrelation function of $x_2$ |
 | --- | --- | --- |
-| 100 | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto11_100.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto2_100.jpg"> |
-| 1000 | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto1_1000.jpg"> | <img src="https://github.com/fardinabbasi/RandomProcess-Quantization/blob/main/readme_images/auto2_1000.jpg"> |
+| 100 | <img src="./doc/auto11_100.jpg"> | <img src="./doc/auto2_100.jpg"> |
+| 1000 | <img src="./doc/auto1_1000.jpg"> | <img src="./doc/auto2_1000.jpg"> |
 
 Here are the exact values of the autocorrelation function calculated manually.
 
@@ -45,7 +45,7 @@ $g(t) = 4 + sin(2\pi t) + cos(\pi t) + cos(\pi t/2) + tan(\pi t/6)$
 To begin, an analog signal $g(t)$ was generated consisting of 15,000 points. Subsequently, the signal was sampled at a frequency of $fs = 300 Hz$. The obtained results are as follows.
 | Analog Signal | Sampled Signal |
 | --- | --- |
-| <img src="readme_images/analog.jpg"> | <img src="readme_images/zoomed.jpg"> |
+| <img src="./doc/analog.jpg"> | <img src="./doc/zoomed.jpg"> |
 ### Applying Quantization Levels
 To perform **uniform quantization**, the range of the sampled signal amplitude was divided into 33 levels. The process was implemented using the following code.
 ```ruby
@@ -67,17 +67,17 @@ end
 ```
 | Quantization levels | Quantized Signal |
 | --- | --- |
-| <img src="readme_images/levels.jpg"> | <img src="readme_images/quant.jpg"> |
+| <img src="./doc/levels.jpg"> | <img src="./doc/quant.jpg"> |
 ### Digitalizing
 This section describes the procedure of transmitting signals from the transmitter to the receiver using **PAM (Pulse Amplitude Modulation)** principles. For each quantized point **(Digit or Symbol)**, the base pulse is multiplied by a specific range before transmission.
 | Base Pulse | Modulation Result | Modulation Result (Zoomed) |
 | --- | --- | --- |
-| <img src="readme_images/base.jpg"> | <img src="readme_images/modulation.jpg"> | <img src="readme_images/m_zoomed.jpg"> |
+| <img src="./doc/base.jpg"> | <img src="./doc/modulation.jpg"> | <img src="./doc/m_zoomed.jpg"> |
 
 ### Receiving the Digital Signal
 The receiver will receive the signal along with **noise**, which is assumed to follow a **normal random process**. The **Signal-to-Noise Ratio (SNR)** is assumed to be 2dB.
 
-<img src="readme_images/energy_calc.jpg">
+<img src="./doc/energy_calc.jpg">
 
 ```ruby
 noise = normrnd(0,0.48,[1,length(modulate_signal)]);
@@ -86,7 +86,7 @@ signal_with_noise = modulate_signal + noise;
 ```
 Here is the received signal with the aforementioned noise.
 
-<img src="readme_images/noisy.jpg">
+<img src="./doc/noisy.jpg">
 
 ### Decoding
 A policy has been implemented to convert the pulses into their corresponding digits, with the knowledge that each digit is sent in **1 second**.
@@ -112,6 +112,10 @@ for i=1:length(energy_each_pulse)
     end
 end
 ```
-<img src="readme_images/decoded.jpg">
+<img src="./doc/decoded.jpg">
 
-
+## Course Description
+- **Course**: Principles of Communication Systems [ECE 891]
+- **Semester**: Fall 2022
+- **Institution:** [School of Electrical & Computer Engineering](https://ece.ut.ac.ir/en/), [College of Engineering](https://eng.ut.ac.ir/en), [University of Tehran](https://ut.ac.ir/en)
+- **Instructors:** Dr. Sabaghian
